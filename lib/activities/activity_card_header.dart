@@ -1,6 +1,6 @@
 import 'package:fitness_tracker_flutter/avatar.dart';
 import 'package:fitness_tracker_flutter/models/activity.dart';
-import 'package:fitness_tracker_flutter/profile_header.dart';
+import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ActivityCardHeader extends StatelessWidget {

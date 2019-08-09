@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:fitness_tracker_flutter/activity_split_header.dart';
-import 'package:fitness_tracker_flutter/activity_split_row.dart';
+import 'package:fitness_tracker_flutter/activities/activity_split_header.dart';
+import 'package:fitness_tracker_flutter/activities/activity_split_row.dart';
 import 'package:fitness_tracker_flutter/models/split.dart';
 import 'package:flutter/material.dart';
 

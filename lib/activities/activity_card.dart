@@ -1,8 +1,8 @@
-import 'package:fitness_tracker_flutter/activity_card_body.dart';
-import 'package:fitness_tracker_flutter/activity_card_header.dart';
-import 'package:fitness_tracker_flutter/activity_splits.dart';
+import 'package:fitness_tracker_flutter/activities/activity_card_body.dart';
+import 'package:fitness_tracker_flutter/activities/activity_card_header.dart';
+import 'package:fitness_tracker_flutter/activities/activity_splits.dart';
 import 'package:fitness_tracker_flutter/models/activity.dart';
-import 'package:fitness_tracker_flutter/profile_header.dart';
+import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ActivityCard extends StatelessWidget {
