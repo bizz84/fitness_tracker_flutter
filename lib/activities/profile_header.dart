@@ -3,7 +3,7 @@ import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {
-  ProfileHeader({@required this.user});
+  const ProfileHeader({@required this.user});
   final User user;
 
   @override
