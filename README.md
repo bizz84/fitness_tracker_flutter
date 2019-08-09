@@ -1,16 +1,21 @@
-# fitness_tracker_flutter
+# Fitness Tracker UI Demo
 
-A new Flutter project.
+YouTube video walk-through here: 
 
-## Getting Started
+TBD
+<!--
+[![Flutter & Firebase: Reference Authentication Flow - Intro](media/firebase-auth-banner-youtube.png)](https://youtu.be/-Za1MspEt5I)
+-->
 
-This project is a starting point for a Flutter application.
+This project shows how to build a custom UI for a fitness tracker in Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Spreads, Collection-If, Collection-For
+- Slivers
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Preview
+
+![](media/preview-iPhoneXR.png)
+
+## [License: MIT](LICENSE.md)
