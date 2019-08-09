@@ -55,8 +55,15 @@ class ActivityHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            if (user.displayName != null) Text(user.displayName, style: Theme.of(context).textTheme.subtitle),
-            Text(activity.dateTime, style: Theme.of(context).textTheme.caption),
+            if (user.displayName != null)
+              Text(
+                user.displayName,
+                style: Theme.of(context).textTheme.subtitle,
+              ),
+            Text(
+              activity.dateTime,
+              style: Theme.of(context).textTheme.caption,
+            ),
           ],
         )
       ],
@@ -90,13 +97,29 @@ class ActivityBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        if (activity.description != null) Text(activity.description, style: Theme.of(context).textTheme.title),
+        if (activity.description != null)
+          Text(activity.description, style: Theme.of(context).textTheme.title),
         SizedBox(height: 16.0),
         Row(
           children: <Widget>[
-            Expanded(child: ActivityMetric(label: 'Distance', value: activity.distance)),
-            Expanded(child: ActivityMetric(label: 'Pace', value: activity.pace)),
-            Expanded(child: ActivityMetric(label: 'Time', value: activity.time)),
+            Expanded(
+              child: ActivityMetric(
+                label: 'Distance',
+                value: activity.distance,
+              ),
+            ),
+            Expanded(
+              child: ActivityMetric(
+                label: 'Pace',
+                value: activity.pace,
+              ),
+            ),
+            Expanded(
+              child: ActivityMetric(
+                label: 'Time',
+                value: activity.time,
+              ),
+            ),
           ],
         ),
       ],
