@@ -3,11 +3,11 @@ import 'package:fitness_tracker_flutter/models/activity.dart';
 import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:fitness_tracker_flutter/activities/profile_header.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ActivitiesPage extends StatelessWidget {
   const ActivitiesPage(
-      {Key key, @required this.user, @required this.activities})
-      : super(key: key);
+      {super.key, required this.user, required this.activities});
   final User user;
   final List<Activity> activities;
 
@@ -16,9 +16,9 @@ class ActivitiesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        title: Text('Activities', style: TextStyle(color: Colors.black87)),
+        title: const Text('Activities', style: TextStyle(color: Colors.black87)),
         elevation: 2,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: _buildBody(context),
       backgroundColor: Colors.grey[200],

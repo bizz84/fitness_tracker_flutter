@@ -6,7 +6,7 @@ import 'package:fitness_tracker_flutter/models/split.dart';
 import 'package:flutter/material.dart';
 
 class ActivitySplits extends StatelessWidget {
-  const ActivitySplits(this.splits);
+  const ActivitySplits(this.splits, {super.key});
   final List<Split> splits;
 
   @override
@@ -16,13 +16,13 @@ class ActivitySplits extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        SizedBox(height: 8.0),
-        Text('Splits', style: Theme.of(context).textTheme.title),
-        SizedBox(height: 8.0),
-        ActivitySplitHeader(),
-        SizedBox(height: 4.0),
-        Divider(color: Colors.black12, height: 0.5),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
+        Text('Splits', style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: 8.0),
+        const ActivitySplitHeader(),
+        const SizedBox(height: 4.0),
+        const Divider(color: Colors.black12, height: 0.5),
+        const SizedBox(height: 8.0),
         for (var split in splits)
           ActivitySplitRow(
             split: split,

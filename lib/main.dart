@@ -4,15 +4,15 @@ import 'package:fitness_tracker_flutter/models/split.dart';
 import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  static const user = const User(
+  static const user = User(
     displayName: 'Andrea Bizzotto',
     username: '@biz84',
   );
-  static const activities = const <Activity>[
-    const Activity(
+  static const activities = <Activity>[
+    Activity(
       dateTime: 'August 6, 2019 at 11:35 AM',
       distance: '11.00 km',
       pace: '5:00 /km',
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         Split(km: 11, pace: Duration(minutes: 5, seconds: 03), elev: 5),
       ],
     ),
-    const Activity(
+    Activity(
       dateTime: 'August 4, 2019 at 7:06 AM',
       distance: '18.52 km',
       pace: '5:02 /km',
@@ -59,19 +59,19 @@ class MyApp extends StatelessWidget {
         Split(km: 18, pace: Duration(minutes: 5, seconds: 11), elev: 15),
       ],
     ),
-    const Activity(
+    Activity(
       dateTime: 'August 1, 2019 at 11:53 AM',
       distance: '10.37 km',
       pace: '4:54 /km',
       time: '50m 52s',
     ),
-    const Activity(
+    Activity(
       dateTime: 'July 29, 2019 at 11:19 AM',
       distance: '11.00 km',
       pace: '4:59 /km',
       time: '54m 51s',
     ),
-    const Activity(
+    Activity(
       dateTime: 'July 26, 2019 at 9:40 AM',
       distance: '8.14 km',
       pace: '4:57 /km',
@@ -79,14 +79,17 @@ class MyApp extends StatelessWidget {
     ),
   ];
 
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        colorSchemeSeed: Colors.green,
       ),
-      home: ActivitiesPage(
+      home: const ActivitiesPage(
         user: user,
         activities: activities,
       ),

@@ -2,7 +2,8 @@ import 'package:fitness_tracker_flutter/models/activity.dart';
 import 'package:flutter/material.dart';
 
 class ActivityCardMetric extends StatelessWidget {
-  const ActivityCardMetric({Key key, this.label, this.value}) : super(key: key);
+  const ActivityCardMetric(
+      {super.key, required this.label, required this.value});
   final String label;
   final String value;
 
@@ -11,15 +12,15 @@ class ActivityCardMetric extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(label, style: Theme.of(context).textTheme.caption),
-        Text(value, style: Theme.of(context).textTheme.title),
+        Text(label, style: Theme.of(context).textTheme.bodySmall),
+        Text(value, style: Theme.of(context).textTheme.titleLarge),
       ],
     );
   }
 }
 
 class ActivityCardBody extends StatelessWidget {
-  const ActivityCardBody({Key key, this.activity}) : super(key: key);
+  const ActivityCardBody({super.key, required this.activity});
   final Activity activity;
 
   @override
@@ -28,8 +29,9 @@ class ActivityCardBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         if (activity.description != null)
-          Text(activity.description, style: Theme.of(context).textTheme.title),
-        SizedBox(height: 16.0),
+          Text(activity.description!,
+              style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: 16.0),
         Row(
           children: <Widget>[
             Expanded(

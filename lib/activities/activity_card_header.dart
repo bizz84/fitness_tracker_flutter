@@ -4,8 +4,8 @@ import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ActivityCardHeader extends StatelessWidget {
-  const ActivityCardHeader({Key key, this.user, this.activity})
-      : super(key: key);
+  const ActivityCardHeader(
+      {super.key, required this.user, required this.activity});
   final User user;
   final Activity activity;
 
@@ -13,19 +13,18 @@ class ActivityCardHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Avatar(radius: 15),
-        SizedBox(width: 16),
+        const Avatar(radius: 15),
+        const SizedBox(width: 16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            if (user.displayName != null)
-              Text(
-                user.displayName,
-                style: Theme.of(context).textTheme.subtitle,
-              ),
+            Text(
+              user.displayName,
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
             Text(
               activity.dateTime,
-              style: Theme.of(context).textTheme.caption,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
         )
