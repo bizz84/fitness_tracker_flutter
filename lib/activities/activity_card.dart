@@ -6,7 +6,7 @@ import 'package:fitness_tracker_flutter/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ActivityCard extends StatelessWidget {
-  const ActivityCard({Key key, this.user, this.activity}) : super(key: key);
+  const ActivityCard({super.key, required this.user, required this.activity});
   final User user;
   final Activity activity;
   @override
@@ -17,12 +17,12 @@ class ActivityCard extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: <Widget>[
-            Divider(color: Colors.black12, height: 0.5),
+            const Divider(color: Colors.black12, height: 0.5),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: _buildContent(),
             ),
-            Divider(color: Colors.black12, height: 0.5),
+            const Divider(color: Colors.black12, height: 0.5),
           ],
         ),
       ),
@@ -34,10 +34,10 @@ class ActivityCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         ActivityCardHeader(user: user, activity: activity),
-        SizedBox(height: 16.0),
+        const SizedBox(height: 16.0),
         ActivityCardBody(activity: activity),
-        SizedBox(height: 16.0),
-        if (activity.splits != null) ActivitySplits(activity.splits),
+        const SizedBox(height: 16.0),
+        if (activity.splits != null) ActivitySplits(activity.splits!),
       ],
     );
   }

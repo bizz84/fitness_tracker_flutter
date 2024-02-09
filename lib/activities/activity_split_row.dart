@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 class ActivitySplitRow extends StatelessWidget {
   const ActivitySplitRow({
-    Key key,
-    @required this.split,
-    @required this.maxPace,
-    @required this.minPace,
+    super.key,
+    required this.split,
+    required this.maxPace,
+    required this.minPace,
     this.kmWidth = 40,
     this.paceWidth = 50,
     this.elevWidth = 40,
-  }) : super(key: key);
+  });
   final Split split;
   final int maxPace;
   final int minPace;
@@ -25,7 +25,7 @@ class ActivitySplitRow extends StatelessWidget {
     final formatted =
         '${split.pace.inMinutes}:${seconds.toString().padLeft(2, '0')}';
     final style =
-        Theme.of(context).textTheme.caption.copyWith(color: Colors.black87);
+        Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.black87);
     return Row(
       children: <Widget>[
         SizedBox(
@@ -57,8 +57,8 @@ class ActivitySplitRow extends StatelessWidget {
 }
 
 class ActivitySplitBar extends StatelessWidget {
-  const ActivitySplitBar({Key key, this.max, this.min, this.current})
-      : super(key: key);
+  const ActivitySplitBar(
+      {super.key, required this.max, required this.min, required this.current});
   final double max;
   final double min;
   final double current;
